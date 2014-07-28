@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <!-- 界面顶部标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </RelativeLayout>
+
+    <!-- 界面内容区域（除标题栏和底部导航栏） -->
+
+    <RelativeLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/topLayout" >
+    </RelativeLayout>
+
+</RelativeLayout>
