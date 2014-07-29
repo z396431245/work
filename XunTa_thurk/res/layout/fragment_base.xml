@@ -7,6 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/topLayout"
+        android:background="#ffffff"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
     </RelativeLayout>
