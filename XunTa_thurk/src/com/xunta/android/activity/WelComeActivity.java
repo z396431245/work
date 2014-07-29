@@ -22,6 +22,7 @@ public class WelComeActivity extends BaseActivity{
 
 	private ImageView imageView;
 	private int ss;
+	/*sss*/
 	
 	Handler handler = new Handler(){
 
