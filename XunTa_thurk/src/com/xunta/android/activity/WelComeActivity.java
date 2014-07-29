@@ -21,6 +21,7 @@ import com.xunta.android.common.LoginState;
 public class WelComeActivity extends BaseActivity{
 
 	private ImageView imageView;
+	private int ss;
 	
 	Handler handler = new Handler(){
 
