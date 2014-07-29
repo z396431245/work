@@ -1,39 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@android:color/white"
     android:orientation="horizontal" >
 
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="fill_parent"
-        android:layout_weight="3"
-        android:background="@android:color/black" >
+        android:layout_weight="3" >
 
         <ImageView
             android:id="@+id/head_picture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/ic_launcher" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="7" >
-        <TextView 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+        <TextView
             android:id="@+id/name"
-            android:text="name"
-            />
-        <TextView 
-            android:layout_below="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/xy"
-            android:text="name"
-            />
+            android:text="name" />
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:text="30km" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/distance"
+            android:layout_below="@+id/name"
+            android:text="30分钟" />
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/distance"
+            android:lines="3"
+            android:text="发生的法师打发打发" />
+
+        <LinearLayout
+            android:id="@+id/photo_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/one"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/two"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/three"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/ic_launcher" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/photo_layout"
+            android:layout_margin="3dp"
+            android:text="心15" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/photo_layout"
+            android:layout_margin="3dp"
+            android:layout_toRightOf="@+id/heart"
+            android:text="消息15" />
+
+        <TextView
+            android:id="@+id/relay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/photo_layout"
+            android:layout_margin="3dp"
+            android:layout_toRightOf="@+id/message"
+            android:text="转发15" />
+
+        <TextView
+            android:id="@+id/omit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/photo_layout"
+            android:layout_margin="3dp"
+            android:text="···" />
     </RelativeLayout>
 
 </LinearLayout>
