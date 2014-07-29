@@ -12,7 +12,6 @@ import com.xunta.android.fragment.MessageFragment;
 import com.xunta.android.fragment.MyCentreFragment;
 import com.xunta.android.fragment.NearbyFragment;
 import com.xunta.android.fragment.PublishFragment;
-//Editor
 public class IndexActivity extends BaseActivity implements OnClickListener{
 
 	private HomeFragment homeFragment;
