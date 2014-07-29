@@ -19,7 +19,6 @@ public class IndexActivity extends BaseActivity implements OnClickListener{
 	private NearbyFragment nearbyFragment;
 	private MyCentreFragment myCentreFragment;
 	private PublishFragment publishFragment;
-	private int ss;
 	
 	/**
 	 * 当前Fragment显示的页面，0表示主页，1表示附近，2表示发布页面 3 消息 4 我的
