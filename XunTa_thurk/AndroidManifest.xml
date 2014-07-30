@@ -14,7 +14,7 @@
         android:theme="@android:style/Theme.Black.NoTitleBar" >
         
         <activity
-            android:name=".activity.WelComeActivity"
+            android:name=".activity.IndexActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -23,13 +23,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+        <!-- 
         <activity 
             android:name=".activity.IndexActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" 
             >
-        </activity>
+        </activity> -->
         
     </application>
 
