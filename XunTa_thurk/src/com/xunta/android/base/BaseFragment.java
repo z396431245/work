@@ -49,6 +49,12 @@ public abstract class BaseFragment extends Fragment{
 		return baseMainView;
 	}
 	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		process(savedInstanceState);
+	}
+	
 	public void findBaseViewById(){
 		topFragmentLayout = (RelativeLayout)baseMainView.findViewById(R.id.topLayout);
 		contentFramentLayout = (RelativeLayout)baseMainView.findViewById(R.id.contentLayout);

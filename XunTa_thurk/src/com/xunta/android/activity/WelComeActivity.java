@@ -1,5 +1,6 @@
-package com.xunta.android.activity; 
+package com.xunta.android.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -11,52 +12,54 @@ import com.xunta.android.base.BaseActivity;
 import com.xunta.android.common.Constent;
 import com.xunta.android.common.LoginState;
 
-/**   
- * @Title: WelComeActivity.java 
- * @Package com.seekta.android.activity 
- * @Description: TODO(欢迎页) 
- * @author zhangchao   
- * @date 2014年7月23日 下午10:41:58   
+/**
+ * @Title: WelComeActivity.java
+ * @Package com.seekta.android.activity
+ * @Description: TODO(欢迎页)
+ * @author zhangchao
+ * @date 2014年7月23日 下午10:41:58
  */
-public class WelComeActivity extends BaseActivity{
+public class WelComeActivity extends BaseActivity {
 
 	private ImageView imageView;
 	private int ss;
-	/*sss*/
-	
-	Handler handler = new Handler(){
+	/* sss */
+
+	Handler handler = new Handler() {
 
 		@Override
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
-			if(LoginState.isLogin(WelComeActivity.this)){
-				//已登录
-				
-			}else{
-				//未登录
-				
+			if (LoginState.isLogin(WelComeActivity.this)) {
+				// 已登录
+
+			} else {
+				// 未登录
+				startActivity(new Intent(WelComeActivity.this,
+						IndexActivity.class));
+
 			}
 		}
-		
+
 	};
-	
+
 	@Override
 	protected void process(Bundle savedInstanceState) {
-		
-		//初始化bmob
+
+		// 初始化bmob
 		Bmob.initialize(this, Constent.ApplicationID);
-		//页面暂停3秒后跳转
+		// 页面暂停3秒后跳转
 		pause();
 	}
 
 	@Override
 	protected void initPageView() {
-		imageView = (ImageView)findViewById(R.id.imageView);
+		imageView = (ImageView) findViewById(R.id.imageView);
 	}
 
 	@Override
 	protected void initPageViewListener() {
-		
+
 	}
 
 	@Override
@@ -67,21 +70,8 @@ public class WelComeActivity extends BaseActivity{
 	/**
 	 * 暂停3秒钟
 	 * */
-	public void pause(){
-		new Thread(){
-
-			@Override
-			public void run() {
-				try {
-					sleep(3000);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-				handler.sendEmptyMessage(1);
-			}
-			
-		}.start();
+	public void pause() {
+		handler.sendEmptyMessageDelayed(1, 3000);
 	}
-	
+
 }
- 
