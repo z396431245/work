@@ -10,7 +10,7 @@
         android:layout_height="fill_parent" >
 
         <ListView
-            android:id="@+id/hot_list"
+            android:id="@+id/hot_list_view"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_margin="5dp" >
@@ -24,11 +24,55 @@
         android:visibility="gone" >
 
         <ListView
-            android:id="@+id/near_list"
+            android:id="@+id/near_list_view"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_margin="5dp" >
         </ListView>
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/filter_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_launcher" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_launcher" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_launcher" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_launcher" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp" />
+    </LinearLayout>
 
 </RelativeLayout>
