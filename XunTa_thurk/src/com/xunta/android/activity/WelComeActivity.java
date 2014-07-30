@@ -32,12 +32,14 @@ public class WelComeActivity extends BaseActivity {
 			super.handleMessage(msg);
 			if (LoginState.isLogin(WelComeActivity.this)) {
 				// ÒÑµÇÂ¼
-
+				startActivity(new Intent(WelComeActivity.this,
+						IndexActivity.class));
+				finish();
 			} else {
 				// Î´µÇÂ¼
 				startActivity(new Intent(WelComeActivity.this,
-						IndexActivity.class));
-
+						LoginActivity.class));
+				finish();
 			}
 		}
 

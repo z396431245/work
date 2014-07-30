@@ -33,7 +33,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="附近" />
+                android:text="消息" />
         </LinearLayout>
 
         <LinearLayout
@@ -59,7 +59,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="消息" />
+                android:text="我的" />
         </LinearLayout>
         
         <LinearLayout
@@ -72,7 +72,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="我的" />
+                android:text="更多" />
         </LinearLayout>
     </LinearLayout>
 

@@ -17,14 +17,6 @@
             android:name=".activity.WelComeActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" >
-            
-        </activity>
-        
-        <activity 
-            android:name=".activity.IndexActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" 
-            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,6 +24,22 @@
             </intent-filter>
         </activity>
         
+        <activity 
+            android:name=".activity.IndexActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" 
+            >
+        </activity>
+        <activity 
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" 
+            >
+        </activity>
+        <activity 
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait" 
+            >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" /><!-- 允许应用打开网络套接口 -->
