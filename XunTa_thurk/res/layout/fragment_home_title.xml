@@ -11,7 +11,7 @@
         <TextView
             android:id="@+id/hot_title"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:layout_margin="5dp"
             android:text="@string/fragment_home_title_hot"
             android:textColor="@android:color/white"
@@ -20,7 +20,7 @@
         <TextView
             android:id="@+id/near_title"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:layout_margin="5dp"
             android:text="@string/fragment_home_title_near"
             android:textColor="@android:color/white"
