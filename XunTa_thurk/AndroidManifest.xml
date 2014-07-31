@@ -40,6 +40,11 @@
             android:screenOrientation="portrait" 
             >
         </activity>
+        <activity 
+            android:name=".activity.DetailActivity"
+            android:screenOrientation="portrait" 
+            >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" /><!-- 允许应用打开网络套接口 -->

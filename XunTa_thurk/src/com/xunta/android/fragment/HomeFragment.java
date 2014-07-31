@@ -1,5 +1,6 @@
 package com.xunta.android.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,6 +14,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import com.xunta.android.R;
+import com.xunta.android.activity.DetailActivity;
 import com.xunta.android.base.BaseFragment;
 import com.xunta.android.item.HomeFragmentListViewItem;
 
@@ -32,6 +34,7 @@ public class HomeFragment extends BaseFragment implements OnItemClickListener,
 	private Button titleHot, titleNear;
 
 	private int pageIndex = 1;
+	private ListView nearListView,hotListView;
 
 	@Override
 	protected void initPageView() {
@@ -60,13 +63,13 @@ public class HomeFragment extends BaseFragment implements OnItemClickListener,
 		filterLayout = (LinearLayout) parentCenterView
 				.findViewById(R.id.filter_layout);
 
-		ListView hotListView = (ListView) parentCenterView
+		hotListView = (ListView) parentCenterView
 				.findViewById(R.id.hot_list_view);
 		ListAdapter adapterHot = new ListAdapter(View.INVISIBLE);
 		hotListView.setAdapter(adapterHot);
 		hotListView.setOnItemClickListener(this);
 
-		ListView nearListView = (ListView) parentCenterView
+		nearListView = (ListView) parentCenterView
 				.findViewById(R.id.near_list_view);
 		ListAdapter adapterNear = new ListAdapter(View.VISIBLE);
 		nearListView.setAdapter(adapterNear);
@@ -75,6 +78,8 @@ public class HomeFragment extends BaseFragment implements OnItemClickListener,
 	@Override
 	protected void initPageViewListener() {
 		titleHot.performClick();
+		hotListView.setOnItemClickListener(this);
+		nearListView.setOnItemClickListener(this);
 	}
 
 	@Override
@@ -99,6 +104,18 @@ public class HomeFragment extends BaseFragment implements OnItemClickListener,
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
+		switch (view.getId()) {
+		case R.id.hot_list_view:
+			
+			break;
+		case R.id.near_list_view:
+			
+			break;
+
+		default:
+			startActivity(new Intent(getActivity(),DetailActivity.class));
+			break;
+		}
 
 	}
 
