@@ -5,10 +5,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.widget.ImageView;
+import cn.bmob.push.BmobPush;
 import cn.bmob.v3.Bmob;
+import cn.bmob.v3.listener.SaveListener;
 
 import com.xunta.android.R;
 import com.xunta.android.base.BaseActivity;
+import com.xunta.android.bean.XuntaData;
 import com.xunta.android.common.Constent;
 import com.xunta.android.common.LoginState;
 
@@ -22,8 +25,6 @@ import com.xunta.android.common.LoginState;
 public class WelComeActivity extends BaseActivity {
 
 	private ImageView imageView;
-	private int ss;
-	/* sss */
 
 	Handler handler = new Handler() {
 
@@ -50,6 +51,7 @@ public class WelComeActivity extends BaseActivity {
 
 		// 初始化bmob
 		Bmob.initialize(this, Constent.ApplicationID);
+		BmobPush.startWork(this, Constent.ApplicationID);
 		// 页面暂停3秒后跳转
 		pause();
 	}

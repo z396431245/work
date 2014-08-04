@@ -1,5 +1,7 @@
 package com.xunta.android.activity;
 
+import java.util.List;
+
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -8,10 +10,16 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.listener.FindListener;
+import cn.bmob.v3.listener.GetListener;
 
 import com.xunta.android.R;
 import com.xunta.android.base.BaseActivity;
+import com.xunta.android.bean.Users;
+import com.xunta.android.common.LoginState;
 import com.xunta.android.tools.Tools;
+import com.xunta.android.tools.Utils;
 
 /**
  * @Title: LoginActivity.java 
@@ -66,16 +74,14 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 			telphone = telphone_edit.getText().toString();
 			password = password_edit.getText().toString();
 			if(!Tools.isNull(telphone)){
-				telphone_edit.setError("请输入手机号");
+				showToast("请输入手机号");
 			}else if(!Tools.isMobileNO(telphone)){
-				telphone_edit.setError("手机格式不正确");
+				showToast("手机格式不正确");
 			}else if(!Tools.isNull(password)){
-				password_edit.setError("请输入密码");
+				showToast("请输入密码");
 			}else{
 				//去数据库验证
-				Intent intent = new Intent(this,IndexActivity.class);
-				startActivity(intent);
-				finish();
+				checkLogin();
 			}
 			break;
 		case R.id.register_btn://注册
@@ -89,6 +95,33 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 			finish();
 			break;
 		}
+	}
+	
+	/**登录验证*/
+	public void checkLogin(){
+		BmobQuery<Users> query = new BmobQuery<Users>();
+		query.addWhereEqualTo("phoneNum", telphone);
+		query.addWhereEqualTo("password", Utils.md5(password));
+		query.findObjects(this, new FindListener<Users>() {
+			
+			@Override
+			public void onSuccess(List<Users> list) {
+				if(list.size() > 0){
+					LoginState.setUserId(LoginActivity.this, list.get(0).getObjectId());
+					Intent intent = new Intent(LoginActivity.this,IndexActivity.class);
+					startActivity(intent);
+					finish();
+				}else{
+					showToast("用户名或密码错误");
+				}
+			}
+			
+			@Override
+			public void onError(int arg0, String arg1) {
+				showToast("失败" + arg1);
+			}
+		});
+		
 	}
 
 }

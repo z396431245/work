@@ -22,6 +22,7 @@
                 android:background="@color/transparency"
                 android:hint="请输入手机号码"
                 android:layout_marginLeft="10dip"
+                android:inputType="phone"
                 />
         </LinearLayout>
         <LinearLayout 
@@ -36,6 +37,7 @@
                 android:background="@color/transparency"
                 android:hint="密码"
                 android:layout_marginLeft="10dip"
+                android:password="true"
                 />
         </LinearLayout>
         <LinearLayout 
@@ -50,6 +52,7 @@
                 android:background="@color/transparency"
                 android:hint="再次输入"
                 android:layout_marginLeft="10dip"
+                android:password="true"
                 />
         </LinearLayout>
         <LinearLayout 
