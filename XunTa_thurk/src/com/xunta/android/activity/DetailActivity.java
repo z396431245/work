@@ -1,5 +1,6 @@
 package com.xunta.android.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -41,6 +42,9 @@ public class DetailActivity extends BaseActivity implements OnClickListener,
 		heartText = (TextView) findViewById(R.id.heart_count);
 		relayText = (TextView) findViewById(R.id.relay_count);
 		revertListView = (ListView) findViewById(R.id.revert_listview);
+		ImageOne = (ImageView) findViewById(R.id.image_one);
+		ImageTwo = (ImageView) findViewById(R.id.image_two);
+		ImageThree = (ImageView) findViewById(R.id.image_three);
 	}
 
 	@Override
@@ -50,7 +54,9 @@ public class DetailActivity extends BaseActivity implements OnClickListener,
 		heartText.setOnClickListener(this);
 		relayText.setOnClickListener(this);
 		revertListView.setOnItemClickListener(this);
-
+		ImageOne.setOnClickListener(this);
+		ImageTwo.setOnClickListener(this);
+		ImageThree.setOnClickListener(this);
 	}
 
 	@Override
@@ -66,7 +72,20 @@ public class DetailActivity extends BaseActivity implements OnClickListener,
 
 	@Override
 	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.image_one:
+			startActivity(new Intent(this,BigPictureActivity.class));
+			break;
+		case R.id.image_two:
 
+			break;
+		case R.id.image_three:
+
+			break;
+
+		default:
+			break;
+		}
 	}
 
 	public class ListAdapter extends BaseAdapter {
