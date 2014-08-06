@@ -1,5 +1,8 @@
 package com.xunta.android.fragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,10 +15,13 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.listener.FindListener;
 
 import com.xunta.android.R;
 import com.xunta.android.activity.DetailActivity;
 import com.xunta.android.base.BaseFragment;
+import com.xunta.android.bean.XuntaData;
 import com.xunta.android.item.HomeFragmentListViewItem;
 
 public class HomeFragment extends BaseFragment implements OnItemClickListener,
@@ -35,6 +41,11 @@ public class HomeFragment extends BaseFragment implements OnItemClickListener,
 
 	private int pageIndex = 1;
 	private ListView nearListView,hotListView;
+	
+	/**热门数据*/
+	private ArrayList<XuntaData> dataList = new ArrayList<XuntaData>();
+	/**热门数据适配器*/
+	ListAdapter adapterHot;
 
 	@Override
 	protected void initPageView() {
@@ -65,9 +76,7 @@ public class HomeFragment extends BaseFragment implements OnItemClickListener,
 
 		hotListView = (ListView) parentCenterView
 				.findViewById(R.id.hot_list_view);
-		ListAdapter adapterHot = new ListAdapter(View.INVISIBLE);
-		hotListView.setAdapter(adapterHot);
-		hotListView.setOnItemClickListener(this);
+		
 
 		nearListView = (ListView) parentCenterView
 				.findViewById(R.id.near_list_view);
@@ -98,7 +107,21 @@ public class HomeFragment extends BaseFragment implements OnItemClickListener,
 
 	@Override
 	protected void process(Bundle savedInstanceState) {
+		BmobQuery<XuntaData> query = new BmobQuery<XuntaData>();
+		query.findObjects(getActivity(), new FindListener<XuntaData>() {
 
+			@Override
+			public void onError(int arg0, String arg1) {
+				
+			}
+
+			@Override
+			public void onSuccess(List<XuntaData> object) {
+				dataList.addAll(object);
+				adapterHot = new ListAdapter(View.GONE);
+				hotListView.setAdapter(adapterHot);
+			}
+		});
 	}
 
 	@Override
@@ -130,7 +153,7 @@ public class HomeFragment extends BaseFragment implements OnItemClickListener,
 
 		@Override
 		public int getCount() {
-			return count;
+			return dataList.size();
 		}
 
 		@Override
@@ -153,8 +176,15 @@ public class HomeFragment extends BaseFragment implements OnItemClickListener,
 			} else {
 				holder = (ViewHolder) convertView.getTag();
 			}
-
+			
 			holder.item.setShowDistance(showDistance);
+			if(View.GONE == showDistance){
+				holder.item.setName(dataList.get(position).getUserName());
+				holder.item.setDetail(dataList.get(position).getContent());
+				holder.item.setHeart("心" + dataList.get(position).getPraiseNum());
+			}
+
+			
 
 			return convertView;
 		}
