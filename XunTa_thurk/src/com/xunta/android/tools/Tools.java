@@ -6,16 +6,16 @@ import android.text.TextUtils;
 /**   
  * @Title: Tools.java 
  * @Package com.seekta.android.tools 
- * @Description: TODO(¹¤¾ßÀà) 
+ * @Description: TODO(å·¥å…·ç±») 
  * @author zhangchao   
- * @date 2014Äê7ÔÂ23ÈÕ ÏÂÎç10:27:01   
+ * @date 2014å¹´7æœˆ23æ—¥ ä¸‹åˆ10:27:01   
  */
 public class Tools {
 	
 	/**
-	 * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÎª¿Õ
-	 * ¿Õ ·µ»Ø false
-	 * ²»Îª¿Õ ·µ»Ø true
+	 * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä¸ºç©º
+	 * ç©º è¿”å› false
+	 * ä¸ä¸ºç©º è¿”å› true
 	 * */
 	public static boolean isNull(String content){
 		if(null != content && !"".equals(content) && !"null".equals(content)){
@@ -25,13 +25,13 @@ public class Tools {
 	}
 	
 	/**
-	 * ÑéÖ¤ÊÖ»ú¸ñÊ½
+	 * éªŒè¯æ‰‹æœºæ ¼å¼
 	 */
 	public static boolean isMobileNO(String mobiles) {
 		/*
-		×Ü½áÆğÀ´¾ÍÊÇµÚÒ»Î»±Ø¶¨Îª1£¬µÚ¶şÎ»±Ø¶¨Îª2µ½9£¬ÆäËûÎ»ÖÃµÄ¿ÉÒÔÎª0-9
+		æ€»ç»“èµ·æ¥å°±æ˜¯ç¬¬ä¸€ä½å¿…å®šä¸º1ï¼Œç¬¬äºŒä½å¿…å®šä¸º2åˆ°9ï¼Œå…¶ä»–ä½ç½®çš„å¯ä»¥ä¸º0-9
 		*/
-		//"[1]"´ú±íµÚ1Î»ÎªÊı×Ö1£¬"[3-9]"´ú±íµÚ¶şÎ»¿ÉÒÔÎª3-9ÖĞµÄÒ»¸ö£¬"\\d{9}"´ú±íºóÃæÊÇ¿ÉÒÔÊÇ0¡«9µÄÊı×Ö£¬ÓĞ9Î»¡£
+		//"[1]"ä»£è¡¨ç¬¬1ä½ä¸ºæ•°å­—1ï¼Œ"[3-9]"ä»£è¡¨ç¬¬äºŒä½å¯ä»¥ä¸º3-9ä¸­çš„ä¸€ä¸ªï¼Œ"\\d{9}"ä»£è¡¨åé¢æ˜¯å¯ä»¥æ˜¯0ã€œ9çš„æ•°å­—ï¼Œæœ‰9ä½ã€‚
 		String telRegex = "[1][3-9]\\d{9}";
 		if (TextUtils.isEmpty(mobiles)){
 			return false;

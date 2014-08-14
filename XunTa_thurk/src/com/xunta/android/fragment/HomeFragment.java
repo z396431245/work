@@ -42,9 +42,9 @@ public class HomeFragment extends BaseFragment implements OnItemClickListener,
 	private int pageIndex = 1;
 	private ListView nearListView,hotListView;
 	
-	/**ÈÈÃÅÊı¾İ*/
+	/**çƒ­é—¨æ•°æ®*/
 	private ArrayList<XuntaData> dataList = new ArrayList<XuntaData>();
-	/**ÈÈÃÅÊı¾İÊÊÅäÆ÷*/
+	/**çƒ­é—¨æ•°æ®é€‚é…å™¨*/
 	ListAdapter adapterHot;
 
 	@Override
@@ -181,7 +181,7 @@ public class HomeFragment extends BaseFragment implements OnItemClickListener,
 			if(View.GONE == showDistance){
 				holder.item.setName(dataList.get(position).getUserName());
 				holder.item.setDetail(dataList.get(position).getContent());
-				holder.item.setHeart("ĞÄ" + dataList.get(position).getPraiseNum());
+				holder.item.setHeart("å¿ƒ" + dataList.get(position).getPraiseNum());
 			}
 
 			

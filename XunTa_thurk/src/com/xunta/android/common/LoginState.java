@@ -6,9 +6,9 @@ import android.content.SharedPreferences;
 /**   
  * @Title: LoginState.java 
  * @Package com.seekta.android.common 
- * @Description: TODO(´æ´¢µÇÂ¼ĞÅÏ¢Àà) 
+ * @Description: TODO(å­˜å‚¨ç™»å½•ä¿¡æ¯ç±») 
  * @author zhangchao   
- * @date 2014Äê7ÔÂ26ÈÕ ÏÂÎç12:56:41   
+ * @date 2014å¹´7æœˆ26æ—¥ ä¸‹åˆ12:56:41   
  */
 public class LoginState {
 
@@ -28,37 +28,37 @@ public class LoginState {
 		
 	}
 	
-	/**±£´æÓÃ»§Í·Ïñ*/
+	/**ä¿å­˜ç”¨æˆ·å¤´åƒ*/
 	public static void setPhotoUrl(Activity activity,String str){
 		SharedPreferences sp = activity.getSharedPreferences(USER_STATE, 0);
 		sp.edit().putString(PHOTOURL, str).commit();
 	}
 	
-	/**»ñÈ¡ÓÃ»§Í·Ïñ*/
+	/**è·å–ç”¨æˆ·å¤´åƒ*/
 	public static String getPhotoUrl(Activity activity){
 		SharedPreferences sp = activity.getSharedPreferences(USER_STATE, 0);
 		return sp.getString(PHOTOURL, "");
 	}
 	
-	/**±£´æÓÃ»§Ãû*/
+	/**ä¿å­˜ç”¨æˆ·å*/
 	public static void setUserName(Activity activity,String str){
 		SharedPreferences sp = activity.getSharedPreferences(USER_STATE, 0);
 		sp.edit().putString(USERNAME, str).commit();
 	}
 	
-	/**»ñÈ¡ÓÃ»§Ãû*/
+	/**è·å–ç”¨æˆ·å*/
 	public static String getUserName(Activity activity){
 		SharedPreferences sp = activity.getSharedPreferences(USER_STATE, 0);
 		return sp.getString(USERNAME, "");
 	}
 	
-	/**±£´æuserid*/
+	/**ä¿å­˜userid*/
 	public static void setUserId(Activity activity,String str){
 		SharedPreferences sp = activity.getSharedPreferences(USER_STATE, 0);
 		sp.edit().putString(USERID, str).commit();
 	}
 
-	/**»ñÈ¡userid*/
+	/**è·å–userid*/
 	public static String getUserId(Activity activity){
 		SharedPreferences sp = activity.getSharedPreferences(USER_STATE, 0);
 		return sp.getString(USERID, "");

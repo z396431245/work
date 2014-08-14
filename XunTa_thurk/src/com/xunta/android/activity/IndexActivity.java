@@ -22,7 +22,7 @@ public class IndexActivity extends BaseActivity implements OnClickListener{
 	private int ss;
 	
 	/**
-	 * µ±Ç°FragmentÏÔÊ¾µÄÒ³Ãæ£¬0±íÊ¾Ö÷Ò³£¬1±íÊ¾¸½½ü£¬2±íÊ¾·¢²¼Ò³Ãæ 3 ÏûÏ¢ 4 ÎÒµÄ
+	 * å½“å‰Fragmentæ˜¾ç¤ºçš„é¡µé¢ï¼Œ0è¡¨ç¤ºä¸»é¡µï¼Œ1è¡¨ç¤ºé™„è¿‘ï¼Œ2è¡¨ç¤ºå‘å¸ƒé¡µé¢ 3 æ¶ˆæ¯ 4 æˆ‘çš„
 	 */
 	private int mcurrentPage = 0;
 	

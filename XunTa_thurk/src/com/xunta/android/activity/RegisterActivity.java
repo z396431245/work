@@ -24,9 +24,9 @@ import com.xunta.android.tools.Utils;
 /**
  * @Title: RegisterActivity.java 
  * @Package com.xunta.android.activity
- * @Description: TODO(×¢²á) 
+ * @Description: TODO(æ³¨å†Œ) 
  * @author zhangchao
- * @date 2014Äê7ÔÂ30ÈÕ ÏÂÎç10:46:43 
+ * @date 2014å¹´7æœˆ30æ—¥ ä¸‹åˆ10:46:43 
  */
 public class RegisterActivity extends BaseActivity implements OnClickListener{
 
@@ -35,7 +35,7 @@ public class RegisterActivity extends BaseActivity implements OnClickListener{
 	private EditText confirmpassword_edit;
 	private Button login_btn;
 	private Button register_btn;
-	private TextView stroll_btn;//Ëæ±ã¿´¿´
+	private TextView stroll_btn;//éšä¾¿çœ‹çœ‹
 	
 	private String telphone;
 	private String password;
@@ -74,32 +74,32 @@ public class RegisterActivity extends BaseActivity implements OnClickListener{
 	public void onClick(View v) {
 		Intent intent;
 		switch(v.getId()){
-		case R.id.login_btn://µÇÂ¼
+		case R.id.login_btn://ç™»å½•
 			intent = new Intent(this,LoginActivity.class);
 			startActivity(intent);
 			finish();
 			break;
-		case R.id.register_btn://×¢²á
+		case R.id.register_btn://æ³¨å†Œ
 			telphone = telphone_edit.getText().toString();
 			password = password_edit.getText().toString();
 			confirmpassword = confirmpassword_edit.getText().toString();
 			if(!Tools.isNull(telphone)){
-				telphone_edit.setError("ÇëÊäÈëÊÖ»úºÅ");
-				showToast("ÇëÊäÈëÊÖ»úºÅ");
+				telphone_edit.setError("è¯·è¾“å…¥æ‰‹æœºå·");
+				showToast("è¯·è¾“å…¥æ‰‹æœºå·");
 			}else if(!Tools.isMobileNO(telphone)){
-				showToast("ÊÖ»ú¸ñÊ½²»ÕıÈ·");
+				showToast("æ‰‹æœºæ ¼å¼ä¸æ­£ç¡®");
 			}else if(!Tools.isNull(password)){
-				showToast("ÇëÊäÈëÃÜÂë");
+				showToast("è¯·è¾“å…¥å¯†ç ");
 			}else if(!Tools.isNull(confirmpassword)){
-				showToast("ÇëÔÙ´ÎÊäÈëÃÜÂë");
+				showToast("è¯·å†æ¬¡è¾“å…¥å¯†ç ");
 			}else if(!password.equals(confirmpassword)){
-				showToast("Á½´ÎÃÜÂë²»Ò»ÖÂ£¬ÇëÖØĞÂÊäÈë");
+				showToast("ä¸¤æ¬¡å¯†ç ä¸ä¸€è‡´ï¼Œè¯·é‡æ–°è¾“å…¥");
 			}else{
-				//È¥Êı¾İ¿âÑéÖ¤
+				//å»æ•°æ®åº“éªŒè¯
 				checkPhone();
 			}
 			break;
-		case R.id.stroll_btn://Ëæ±ã¿´¿´
+		case R.id.stroll_btn://éšä¾¿çœ‹çœ‹
 			intent = new Intent(this,IndexActivity.class);
 			startActivity(intent);
 			finish();
@@ -107,7 +107,7 @@ public class RegisterActivity extends BaseActivity implements OnClickListener{
 		}
 	}
 	
-	/**¼ì²âÊÖ»úºÅÊÇ·ñ¿ÉÓÃ*/
+	/**æ£€æµ‹æ‰‹æœºå·æ˜¯å¦å¯ç”¨*/
 	public void checkPhone(){
 		BmobQuery<Users> query = new BmobQuery<Users>();
 		query.addWhereEqualTo("phoneNum", telphone);
@@ -116,7 +116,7 @@ public class RegisterActivity extends BaseActivity implements OnClickListener{
 			@Override
 			public void onSuccess(List<Users> list) {
 				if(list.size() > 0){
-					showToast("ÊÖ»úÒÑ±»×¢²á");
+					showToast("æ‰‹æœºå·²è¢«æ³¨å†Œ");
 				}else{
 					register();
 				}
@@ -124,12 +124,12 @@ public class RegisterActivity extends BaseActivity implements OnClickListener{
 			
 			@Override
 			public void onError(int arg0, String arg1) {
-				showToast("Ê§°Ü" + arg1);
+				showToast("å¤±è´¥" + arg1);
 			}
 		});
 	}
 	
-	/**×¢²á*/
+	/**æ³¨å†Œ*/
 	public void register(){
 		final Users users = new Users();
 		users.setPhoneNum(telphone);
@@ -138,7 +138,7 @@ public class RegisterActivity extends BaseActivity implements OnClickListener{
 			
 			@Override
 			public void onSuccess() {
-				showToast("×¢²á³É¹¦");
+				showToast("æ³¨å†ŒæˆåŠŸ");
 				LoginState.setUserId(RegisterActivity.this, users.getObjectId());
 				Intent intent = new Intent(RegisterActivity.this,IndexActivity.class);
 				startActivity(intent);
@@ -147,7 +147,7 @@ public class RegisterActivity extends BaseActivity implements OnClickListener{
 			
 			@Override
 			public void onFailure(int arg0, String arg1) {
-				showToast("×¢²áÊ§°Ü£¬Çë¼ì²éÍøÂçÊÇ·ñÁ¬½Ó¡£");
+				showToast("æ³¨å†Œå¤±è´¥ï¼Œè¯·æ£€æŸ¥ç½‘ç»œæ˜¯å¦è¿æ¥ã€‚");
 			}
 		});
 	}

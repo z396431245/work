@@ -5,9 +5,9 @@ import cn.bmob.v3.BmobObject;
 /**
  * @Title: Users.java 
  * @Package com.xunta.android.bean
- * @Description: TODO(ÓÃÒ»¾ä»°ÃèÊö¸ÃÎÄ¼ş×öÊ²Ã´) 
+ * @Description: TODO(ç”¨ä¸€å¥è¯æè¿°è¯¥æ–‡ä»¶åšä»€ä¹ˆ) 
  * @author zhangchao
- * @date 2014Äê8ÔÂ3ÈÕ ÏÂÎç5:52:25 
+ * @date 2014å¹´8æœˆ3æ—¥ ä¸‹åˆ5:52:25 
  */
 public class Users extends BmobObject{
 	

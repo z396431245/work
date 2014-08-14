@@ -10,16 +10,16 @@ import android.widget.Toast;
 
 public abstract class BaseActivity extends FragmentActivity{
 
-	/** ³éÏó·½·¨ £¬×ÓÀà±ØĞëÊµÏÖ£¬Âß¼­´¦Àí */
+	/** æŠ½è±¡æ–¹æ³• ï¼Œå­ç±»å¿…é¡»å®ç°ï¼Œé€»è¾‘å¤„ç† */
 	protected abstract void process(Bundle savedInstanceState);
-	/** ³éÏó·½·¨ £¬×ÓÀà±ØĞëÊµÏÖ£¬³õÊ¼»¯Ò³Ãæ¿Ø¼ş¡£ */
+	/** æŠ½è±¡æ–¹æ³• ï¼Œå­ç±»å¿…é¡»å®ç°ï¼Œåˆå§‹åŒ–é¡µé¢æ§ä»¶ã€‚ */
 	protected abstract void initPageView();
 
-	/** ³éÏó·½·¨ £¬×ÓÀà±ØĞëÊµÏÖ£¬Ò³Ãæ¿Ø¼şµã»÷ÊÂ¼ş´¦Àí */
+	/** æŠ½è±¡æ–¹æ³• ï¼Œå­ç±»å¿…é¡»å®ç°ï¼Œé¡µé¢æ§ä»¶ç‚¹å‡»äº‹ä»¶å¤„ç† */
 	protected abstract void initPageViewListener();
 	
 	/**
-	 * »ñÈ¡ÄÚÈİ²¼¾Ö
+	 * è·å–å†…å®¹å¸ƒå±€
 	 */
 	protected abstract int loadContentLayout();
 	
@@ -35,7 +35,7 @@ public abstract class BaseActivity extends FragmentActivity{
 	}
 	
 	/**
-	 * toastÌáÊ¾
+	 * toastæç¤º
 	 * */
 	public void showToast(String content){
 		Toast.makeText(this, content, 1000).show();

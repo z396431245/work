@@ -24,9 +24,9 @@ import com.xunta.android.tools.Utils;
 /**
  * @Title: LoginActivity.java 
  * @Package com.xunta.android.activity
- * @Description: TODO(µÇÂ¼) 
+ * @Description: TODO(ç™»å½•) 
  * @author zhangchao
- * @date 2014Äê7ÔÂ30ÈÕ ÏÂÎç9:52:42 
+ * @date 2014å¹´7æœˆ30æ—¥ ä¸‹åˆ9:52:42 
  */
 public class LoginActivity extends BaseActivity implements OnClickListener{
 
@@ -34,7 +34,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 	private EditText password_edit;
 	private Button login_btn;
 	private Button register_btn;
-	private TextView stroll_btn;//Ëæ±ã¿´¿´
+	private TextView stroll_btn;//éšä¾¿çœ‹çœ‹
 	
 	private String telphone;
 	private String password;
@@ -70,26 +70,26 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		switch(v.getId()){
-		case R.id.login_btn://µÇÂ¼
+		case R.id.login_btn://ç™»å½•
 			telphone = telphone_edit.getText().toString();
 			password = password_edit.getText().toString();
 			if(!Tools.isNull(telphone)){
-				showToast("ÇëÊäÈëÊÖ»úºÅ");
+				showToast("è¯·è¾“å…¥æ‰‹æœºå·");
 			}else if(!Tools.isMobileNO(telphone)){
-				showToast("ÊÖ»ú¸ñÊ½²»ÕıÈ·");
+				showToast("æ‰‹æœºæ ¼å¼ä¸æ­£ç¡®");
 			}else if(!Tools.isNull(password)){
-				showToast("ÇëÊäÈëÃÜÂë");
+				showToast("è¯·è¾“å…¥å¯†ç ");
 			}else{
-				//È¥Êı¾İ¿âÑéÖ¤
+				//å»æ•°æ®åº“éªŒè¯
 				checkLogin();
 			}
 			break;
-		case R.id.register_btn://×¢²á
+		case R.id.register_btn://æ³¨å†Œ
 			Intent intent = new Intent(this,RegisterActivity.class);
 			startActivity(intent);
 			finish();
 			break;
-		case R.id.stroll_btn://Ëæ±ã¿´¿´
+		case R.id.stroll_btn://éšä¾¿çœ‹çœ‹
 			intent = new Intent(this,IndexActivity.class);
 			startActivity(intent);
 			finish();
@@ -97,7 +97,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 		}
 	}
 	
-	/**µÇÂ¼ÑéÖ¤*/
+	/**ç™»å½•éªŒè¯*/
 	public void checkLogin(){
 		BmobQuery<Users> query = new BmobQuery<Users>();
 		query.addWhereEqualTo("phoneNum", telphone);
@@ -112,13 +112,13 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 					startActivity(intent);
 					finish();
 				}else{
-					showToast("ÓÃ»§Ãû»òÃÜÂë´íÎó");
+					showToast("ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯");
 				}
 			}
 			
 			@Override
 			public void onError(int arg0, String arg1) {
-				showToast("Ê§°Ü" + arg1);
+				showToast("å¤±è´¥" + arg1);
 			}
 		});
 		

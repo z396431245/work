@@ -2,13 +2,13 @@ package com.xunta.android.common;
 /**   
  * @Title: Constent.java 
  * @Package com.seekta.android.common 
- * @Description: TODO(ÓÃÒ»¾ä»°ÃèÊö¸ÃÎÄ¼ş×öÊ²Ã´) 
+ * @Description: TODO(ç”¨ä¸€å¥è¯æè¿°è¯¥æ–‡ä»¶åšä»€ä¹ˆ) 
  * @author zhangchao   
- * @date 2014Äê7ÔÂ23ÈÕ ÏÂÎç10:33:29   
+ * @date 2014å¹´7æœˆ23æ—¥ ä¸‹åˆ10:33:29   
  */
 public class Constent {
 
-	/**ÈÕÖ¾´òÓ¡¿ª¹Ø true ´òÓ¡ false ²»´òÓ¡*/
+	/**æ—¥å¿—æ‰“å°å¼€å…³ true æ‰“å° false ä¸æ‰“å°*/
 	public static final boolean isLog = true;
 	
 	public static final String ApplicationID = "d1e278c4a2b86e4641ab45e436a1415b";
