@@ -18,9 +18,9 @@ import com.xunta.android.common.LoginState;
 /**
  * @Title: WelComeActivity.java
  * @Package com.seekta.android.activity
- * @Description: TODO(»¶Ó­Ò³)
+ * @Description: TODO(æ¬¢è¿é¡µ)
  * @author zhangchao
- * @date 2014Äê7ÔÂ23ÈÕ ÏÂÎç10:41:58
+ * @date 2014å¹´7æœˆ23æ—¥ ä¸‹åˆ10:41:58
  */
 public class WelComeActivity extends BaseActivity {
 
@@ -32,12 +32,12 @@ public class WelComeActivity extends BaseActivity {
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
 			if (LoginState.isLogin(WelComeActivity.this)) {
-				// ÒÑµÇÂ¼
+				// å·²ç™»å½•
 				startActivity(new Intent(WelComeActivity.this,
 						IndexActivity.class));
 				finish();
 			} else {
-				// Î´µÇÂ¼
+				// æœªç™»å½•
 				startActivity(new Intent(WelComeActivity.this,
 						LoginActivity.class));
 				finish();
@@ -49,10 +49,10 @@ public class WelComeActivity extends BaseActivity {
 	@Override
 	protected void process(Bundle savedInstanceState) {
 
-		// ³õÊ¼»¯bmob
+		// åˆå§‹åŒ–bmob
 		Bmob.initialize(this, Constent.ApplicationID);
 		BmobPush.startWork(this, Constent.ApplicationID);
-		// Ò³ÃæÔİÍ£3ÃëºóÌø×ª
+		// é¡µé¢æš‚åœ3ç§’åè·³è½¬
 		pause();
 	}
 
@@ -72,7 +72,7 @@ public class WelComeActivity extends BaseActivity {
 	}
 
 	/**
-	 * ÔİÍ£3ÃëÖÓ
+	 * æš‚åœ3ç§’é’Ÿ
 	 * */
 	public void pause() {
 		handler.sendEmptyMessageDelayed(1, 3000);

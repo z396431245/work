@@ -13,20 +13,20 @@ import android.widget.RelativeLayout;
 
 public abstract class BaseFragment extends Fragment{
 
-	/** ÊÇ·ñÖ´ĞĞÁËOnAttach */
+	/** æ˜¯å¦æ‰§è¡Œäº†OnAttach */
 	private boolean isExceOnAttach = false;
-	/** ÊÇ·ñÒş²ØÒ³ÃæÁË */
+	/** æ˜¯å¦éšè—é¡µé¢äº† */
 	private boolean isHidePage = false;
-	/** ÊÇ·ñÕıÔÚÕ¹Ê¾Ò³Ãæ */
+	/** æ˜¯å¦æ­£åœ¨å±•ç¤ºé¡µé¢ */
 	public boolean isShowingPage = true;
 	
-	/** Ò³ÃæÌø×ª´«µİµÄ²ÎÊı */
+	/** é¡µé¢è·³è½¬ä¼ é€’çš„å‚æ•° */
 	private Bundle bundle;
-	/** »ùÀàview */
+	/** åŸºç±»view */
 	public View baseMainView;
-	/** ¶¥²¿title²¼¾Ö */
+	/** é¡¶éƒ¨titleå¸ƒå±€ */
 	public RelativeLayout topFragmentLayout;
-	/** µ×²¿²Ëµ¥²¼¾Ö */
+	/** åº•éƒ¨èœå•å¸ƒå±€ */
 	public RelativeLayout contentFramentLayout;
 	
 	
@@ -43,7 +43,7 @@ public abstract class BaseFragment extends Fragment{
 		
 		baseMainView = inflater.inflate(R.layout.fragment_base, container,false);
 		findBaseViewById();
-		/** ³õÊ¼»¯Ò³Ãæ¿Ø¼ş¡£ */
+		/** åˆå§‹åŒ–é¡µé¢æ§ä»¶ã€‚ */
 		initPageView();
 		initPageViewListener();
 		return baseMainView;
@@ -106,7 +106,7 @@ public abstract class BaseFragment extends Fragment{
 	public void onResume() {
 		super.onResume();
 		if (!isExceOnAttach && !isHidePage) {
-			// ²»ÊÇµÚÒ»´Î½øÀ´²¢ÇÒÃ»ÓĞÒş²Ø£¬ĞèÒªË¢ĞÂÒ³Ãæ¿ÉÒÔÊµÏÖ´Ë·½·¨
+			// ä¸æ˜¯ç¬¬ä¸€æ¬¡è¿›æ¥å¹¶ä¸”æ²¡æœ‰éšè—ï¼Œéœ€è¦åˆ·æ–°é¡µé¢å¯ä»¥å®ç°æ­¤æ–¹æ³•
 			isShowingPage = true;
 			
 		}
@@ -114,7 +114,7 @@ public abstract class BaseFragment extends Fragment{
 
 
 	/**
-	 * Ò³ÃæÌø×ª´«µİµÄ²ÎÊı
+	 * é¡µé¢è·³è½¬ä¼ é€’çš„å‚æ•°
 	 * 
 	 * @param bundle
 	 */
@@ -123,7 +123,7 @@ public abstract class BaseFragment extends Fragment{
 	}
 
 	/**
-	 * »ñÈ¡Ò³Ãæ´«µİµÄ²ÎÊı
+	 * è·å–é¡µé¢ä¼ é€’çš„å‚æ•°
 	 * 
 	 * @return
 	 */
@@ -131,23 +131,23 @@ public abstract class BaseFragment extends Fragment{
 		return bundle;
 	}
 	
-	/** ³éÏó·½·¨ £¬×ÓÀà±ØĞëÊµÏÖ£¬³õÊ¼»¯Ò³Ãæ¿Ø¼ş¡£ */
+	/** æŠ½è±¡æ–¹æ³• ï¼Œå­ç±»å¿…é¡»å®ç°ï¼Œåˆå§‹åŒ–é¡µé¢æ§ä»¶ã€‚ */
 	protected abstract void initPageView();
 
-	/** ³éÏó·½·¨ £¬×ÓÀà±ØĞëÊµÏÖ£¬Ò³Ãæ¿Ø¼şµã»÷ÊÂ¼ş´¦Àí */
+	/** æŠ½è±¡æ–¹æ³• ï¼Œå­ç±»å¿…é¡»å®ç°ï¼Œé¡µé¢æ§ä»¶ç‚¹å‡»äº‹ä»¶å¤„ç† */
 	protected abstract void initPageViewListener();
 
 	/**
-	 * »ñÈ¡¶¥²¿²¼¾Ö
+	 * è·å–é¡¶éƒ¨å¸ƒå±€
 	 */
 	protected abstract View loadTopLayout();
 
 	/**
-	 * »ñÈ¡ÄÚÈİ²¼¾Ö
+	 * è·å–å†…å®¹å¸ƒå±€
 	 */
 	protected abstract View loadContentLayout();
 
-	/** ³éÏó·½·¨ £¬×ÓÀà±ØĞëÊµÏÖ£¬Âß¼­´¦Àí */
+	/** æŠ½è±¡æ–¹æ³• ï¼Œå­ç±»å¿…é¡»å®ç°ï¼Œé€»è¾‘å¤„ç† */
 	protected abstract void process(Bundle savedInstanceState);
 	
 }

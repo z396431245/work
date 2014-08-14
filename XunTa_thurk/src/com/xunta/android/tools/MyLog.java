@@ -7,9 +7,9 @@ import com.xunta.android.common.Constent;
 /**   
  * @Title: MyLog.java 
  * @Package com.seekta.android.tools 
- * @Description: TODO(Log´òÓ¡ÈÕÖ¾Àà) 
+ * @Description: TODO(Logæ‰“å°æ—¥å¿—ç±») 
  * @author zhangchao   
- * @date 2014Äê7ÔÂ23ÈÕ ÏÂÎç10:32:20   
+ * @date 2014å¹´7æœˆ23æ—¥ ä¸‹åˆ10:32:20   
  */
 public class MyLog {
 

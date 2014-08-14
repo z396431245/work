@@ -7,13 +7,13 @@ import java.security.NoSuchAlgorithmException;
 /**
  * @Title: Utils.java
  * @Package com.xunta.android.tools
- * @Description: TODO(¹¤¾ß)
+ * @Description: TODO(å·¥å…·)
  * @author zhangchao
- * @date 2014Äê8ÔÂ4ÈÕ ÏÂÎç10:05:00
+ * @date 2014å¹´8æœˆ4æ—¥ ä¸‹åˆ10:05:00
  */
 public class Utils {
 
-	/**md5¼ÓÃÜ*/
+	/**md5åŠ å¯†*/
 	public static String md5(String string) {
 
 		byte[] hash;

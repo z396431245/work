@@ -1,13 +1,14 @@
 package com.xunta.android.bean;
 
 import cn.bmob.v3.BmobObject;
+import cn.bmob.v3.datatype.BmobGeoPoint;
 
 /**
  * @Title: XuntaData.java 
  * @Package com.xunta.android.bean
- * @Description: TODO(ÓÃÒ»¾ä»°ÃèÊö¸ÃÎÄ¼ş×öÊ²Ã´) 
+ * @Description: TODO(ç”¨ä¸€å¥è¯æè¿°è¯¥æ–‡ä»¶åšä»€ä¹ˆ) 
  * @author zhangchao
- * @date 2014Äê8ÔÂ4ÈÕ ÏÂÎç10:37:02 
+ * @date 2014å¹´8æœˆ4æ—¥ ä¸‹åˆ10:37:02 
  */
 @SuppressWarnings("serial")
 public class XuntaData extends BmobObject{
@@ -17,9 +18,10 @@ public class XuntaData extends BmobObject{
 	private String photoUrl;
 	private String content;
 	private String imgUrl;
-	private String loction;
 	private int praiseNum;
 	private String tag;
+	private BmobGeoPoint geoPoint;
+	
 	public String getUserName() {
 		return userName;
 	}
@@ -50,11 +52,12 @@ public class XuntaData extends BmobObject{
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
 	}
-	public String getLoction() {
-		return loction;
+	
+	public BmobGeoPoint getGeoPoint() {
+		return geoPoint;
 	}
-	public void setLoction(String loction) {
-		this.loction = loction;
+	public void setGeoPoint(BmobGeoPoint geoPoint) {
+		this.geoPoint = geoPoint;
 	}
 	public int getPraiseNum() {
 		return praiseNum;
