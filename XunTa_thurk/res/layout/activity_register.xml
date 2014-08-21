@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg" >
     
     <LinearLayout 
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="70dip"
-        android:paddingLeft="30dip"
-        android:paddingRight="30dip"
+        android:paddingLeft="25dip"
+        android:paddingRight="25dip"
         >
         <LinearLayout 
             android:layout_width="fill_parent"
@@ -19,10 +20,12 @@
                 android:id="@+id/telphone_edit"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:background="@color/transparency"
                 android:hint="请输入手机号码"
-                android:layout_marginLeft="10dip"
                 android:inputType="phone"
+                android:background="@drawable/bg_register_input_03"
+                android:textColor="@color/lightgray"
+                android:textSize="14sp"
+                android:padding="10dip"
                 />
         </LinearLayout>
         <LinearLayout 
@@ -34,10 +37,12 @@
                 android:id="@+id/password_edit"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:background="@color/transparency"
                 android:hint="密码"
-                android:layout_marginLeft="10dip"
                 android:password="true"
+                android:background="@drawable/bg_register_input_03"
+                android:textColor="@color/lightgray"
+                android:textSize="14sp"
+                android:padding="10dip"
                 />
         </LinearLayout>
         <LinearLayout 
@@ -49,10 +54,12 @@
                 android:id="@+id/confirmpassword_edit"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:background="@color/transparency"
                 android:hint="再次输入"
-                android:layout_marginLeft="10dip"
                 android:password="true"
+                android:background="@drawable/bg_register_input_03"
+                android:textColor="@color/lightgray"
+                android:textSize="14sp"
+                android:padding="10dip"
                 />
         </LinearLayout>
         <LinearLayout 
@@ -69,7 +76,7 @@
                 android:text="去登录"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                android:background="#ff0000"
+                android:background="@drawable/login_red_btn"
                 android:layout_marginRight="3dip"
                 />
             <Button 
@@ -81,7 +88,7 @@
                 android:text="注册"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                android:background="#0000ff"
+                android:background="@drawable/register_blue_btn"
                 android:layout_marginLeft="3dip"
                 />
         </LinearLayout>
@@ -94,6 +101,7 @@
         android:layout_centerHorizontal="true"
         android:text="随便看看"
         android:textSize="20sp"
+        android:textColor="@color/white"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="40dip"
         />

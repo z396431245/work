@@ -19,7 +19,7 @@
     
     
     <style name="XuntaTitleTheme">
-        <item name="android:background">#9933FF</item>
+        <item name="android:background">@drawable/bg_buttom_03</item>
         <item name="android:layout_height">50dp</item>
         <item name="android:layout_width">fill_parent</item>
         

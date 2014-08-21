@@ -7,7 +7,8 @@
         android:id="@+id/bottomLayout"
         android:layout_width="fill_parent"
         android:layout_height="50dip"
-        android:orientation="horizontal" 
+        android:orientation="horizontal"
+        android:background="@drawable/bg_buttom_03"
         android:layout_alignParentBottom="true">
 
         <LinearLayout
@@ -15,12 +16,14 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:gravity="center" >
+            >
 
-            <TextView
+            <ImageView 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="寻ta" />
+                android:background="@drawable/btn_buttom_select_01"
+                />
+            
         </LinearLayout>
         
         <LinearLayout
@@ -30,10 +33,11 @@
             android:layout_weight="1"
             android:gravity="center" >
 
-            <TextView
+            <ImageView 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="消息" />
+                android:background="@drawable/btn_buttom_normal_02"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -43,10 +47,11 @@
             android:layout_weight="1"
             android:gravity="center" >
 
-            <TextView
+            <ImageView 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="发布" />
+                android:background="@drawable/btn_buttom_03"
+                />
         </LinearLayout>
         
         <LinearLayout
@@ -56,10 +61,11 @@
             android:layout_weight="1"
             android:gravity="center" >
 
-            <TextView
+            <ImageView 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="我的" />
+                android:background="@drawable/btn_buttom_normal_04"
+                />
         </LinearLayout>
         
         <LinearLayout
@@ -69,10 +75,11 @@
             android:layout_weight="1"
             android:gravity="center" >
 
-            <TextView
+            <ImageView 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="更多" />
+                android:background="@drawable/btn_buttom_normal_05"
+                />
         </LinearLayout>
     </LinearLayout>
 

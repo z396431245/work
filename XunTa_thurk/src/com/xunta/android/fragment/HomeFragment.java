@@ -200,16 +200,16 @@ public class HomeFragment extends BaseFragment implements OnItemClickListener,
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.hot_title:
-			titleHot.setTextColor(this.getResources().getColor(R.color.white));
-			titleNear.setTextColor(this.getResources().getColor(R.color.black));
+			titleHot.setTextColor(this.getResources().getColor(R.color.yellow));
+			titleNear.setTextColor(this.getResources().getColor(R.color.white));
 			pageIndex = 1;
 			hotLayout.setVisibility(View.VISIBLE);
 			nearLayout.setVisibility(View.GONE);
 			filterLayout.setVisibility(View.GONE);
 			break;
 		case R.id.near_title:
-			titleHot.setTextColor(this.getResources().getColor(R.color.black));
-			titleNear.setTextColor(this.getResources().getColor(R.color.white));
+			titleHot.setTextColor(this.getResources().getColor(R.color.white));
+			titleNear.setTextColor(this.getResources().getColor(R.color.yellow));
 			pageIndex = 2;
 			hotLayout.setVisibility(View.GONE);
 			nearLayout.setVisibility(View.VISIBLE);

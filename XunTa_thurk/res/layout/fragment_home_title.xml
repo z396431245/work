@@ -11,6 +11,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:paddingRight="35dip"
             android:orientation="horizontal" >
 
             <Button
@@ -21,7 +22,7 @@
                 android:background="@android:color/transparent"
                 android:text="@string/fragment_home_title_hot"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/near_title"
@@ -31,16 +32,19 @@
                 android:background="@android:color/transparent"
                 android:text="@string/fragment_home_title_near"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
         <Button
             android:id="@+id/filter_bt"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dip"
             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
             android:layout_marginRight="10dp"
             android:text="@string/fragment_home_title_filter"
+            android:background="@anim/btn_search_selector"
             android:textColor="@android:color/white" />
     </RelativeLayout>
 
