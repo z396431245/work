@@ -24,6 +24,7 @@ import com.xunta.android.base.BaseFragment;
 import com.xunta.android.bean.XuntaData;
 import com.xunta.android.item.HomeFragmentListViewItem;
 
+
 public class HomeFragment extends BaseFragment implements OnItemClickListener,
 		OnClickListener {
 
